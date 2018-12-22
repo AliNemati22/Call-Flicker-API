@@ -1,0 +1,70 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="overlay" id="overlayDiv" style="display:none">
+    <div style="display:inline-block; padding-top:15%">
+        <img src="~/css/MnyxU.gif" style="" />
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-5">
+            <div id="SDKmap" style="width:100%;height:250px; background-color:#c8c5c5; position:relative;"></div>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <label for="txtKeywords">Keywords: </label>
+                <input type="text" class="form-control" id="txtKeywords" placeholder="keywords seperated by comma" />
+
+            </div>
+            <div class="row">
+                <label for="txtLat">Lat: (or click on desired location on map)</label>
+                <input type="number" class="form-control" id="txtLat" />
+
+            </div>
+            <div class="row">
+                <label for="txtLon">Lon: </label>
+                <input type="number" class="form-control" id="txtLon" />
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <button id="btnSearch" class="btn btn-primary" style="margin-top: 20px;">Search</button>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-8" style="margin-top:20px;margin-bottom:20px">
+                    <button id="btnPre" class="btn btn-default"><</button>
+                    <span id="spnPage"></span>&nbsp;of&nbsp;
+                    <span id="spnTotalCount"></span>
+                    <button id="btnNext" class="btn btn-default">></button>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <div class="row">
+                <a id="detailUrl" target="_blank" href="#">
+                    <img id="detailImg" />
+                </a>
+            </div>
+            <div id="detailDesc" class="row"></div>
+            <div id="detailOwner" class="row"></div>
+            <div id="detailTags" class="row" style="word-break: break-word;"></div>
+        </div>
+
+    </div>
+
+    <hr />
+    <div class="row" id="resultContainer">
+
+    </div>
+
+</div>
+
